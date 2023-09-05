@@ -74,7 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-print(BASE_DIR)
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
