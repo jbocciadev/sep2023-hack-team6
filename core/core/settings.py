@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', '8000-jbocciadev-sep2023hackt-y8sdu7s4i9n.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['127.0.0.1', '8000-jbocciadev-sep2023hackt-y8sdu7s4i9n.ws-eu104.gitpod.io', 'www.team6.cafabr.online']
 
 
 # Application definition
@@ -74,7 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-print(BASE_DIR)
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
