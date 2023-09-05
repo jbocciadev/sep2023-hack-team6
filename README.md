@@ -107,7 +107,6 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 
 Happy coding!
 
+Juan here testing git commands. Shane here testing git commands.
 
-Juan here testing git commands.
-
-Megan here too testing from VScode
+Meg here testing my branch from VScode
