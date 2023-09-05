@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Team6" />
+    <meta name="description" content="TODO: Add description" />
+    <meta name="keywords" content="TODO: add keywords" />
+    <title>{% block title %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+    <div>
+        {% include "navbar.html" %}
+    </div>
+    <div class="">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div>
+        {% include "footer.html"%}
+    </div>
+
+    {% block postloadjs %} 
+    {% endblock%}
+</body>
+</html>
