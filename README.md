@@ -109,7 +109,7 @@ Happy coding!
 
 Juan here testing git commands. Shane here testing git commands.
 
-Meg here testing my branch from VScode
+Meg here testing my branch from Gitpod
 
 Juan here testing git commands.
 Shane here testing git commands.
