@@ -11,9 +11,11 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 
     <title>{% block title %}{% endblock %}</title>
+    {% load static %}
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
@@ -29,8 +31,6 @@
             {% include "footer.html"%}
         </div>
     </footer>
-
-    {% block postloadjs %} 
-    {% endblock%}
 </body>
+<script src="{% static 'js/scripts.js' %}"></script>
 </html>
