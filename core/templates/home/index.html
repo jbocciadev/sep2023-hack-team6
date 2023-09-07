@@ -14,13 +14,80 @@
       bottom: 0;
       width: 100%;
     }
+    .marker {
+      display: block;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      padding: 0;
+    }
   </style>
 </head>
 
   <div id="map"></div>
-  
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
 <script>
     mapboxgl.accessToken = "pk.eyJ1IjoiY2FsbHVtZGVubmlzaWUiLCJhIjoiY2xrM3gyNmtrMDZsMzNvcnlkcDA1OGlyNSJ9.JPGtfXiSJF5qipCkDbQuyg";
+
+    const geojson = {
+      'type': 'FeatureCollection',
+      'features': [
+        {
+          'type': 'Feature',
+          'properties': {
+            'message': 'Foo',
+            'iconSize': [60, 60]
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-66.324462, -16.024695]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'message': 'Bar',
+            'iconSize': [50, 50]
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-61.21582, -15.971891]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'message': 'Baz',
+            'iconSize': [40, 40]
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-63.292236, -18.281518]
+          }
+        }
+      ]
+    };
 
     const map = new mapboxgl.Map({
       container: 'map',
@@ -33,6 +100,28 @@
     map.on("style.load", () => {
       map.setFog({});
     });
+
+    // Add markers to the map.
+    for (const marker of geojson.features) {
+      // Create a DOM element for each marker.
+      const el = document.createElement('div');
+      const width = marker.properties.iconSize[0];
+      const height = marker.properties.iconSize[1];
+      el.className = 'marker';
+      el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
+      el.style.width = `${width}px`;
+      el.style.height = `${height}px`;
+      el.style.backgroundSize = '100%';
+      
+      el.addEventListener('click', () => {
+        $('#exampleModal').modal('toggle')
+      });
+      
+      // Add markers to the map.
+      new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+    }
 </script>
 
 {% endblock %}
