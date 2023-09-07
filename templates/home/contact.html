@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Contact Us</h1>
+<p>
+    If you would like for your company to be added to our site, please fill in our form below with some basic information.
+    We will get back in touch and get all the relevant information from you.
+</p>
+
+<form method="POST">
+    <label for="company-name">Company Name</label>
+    <input type="text" id="company-name" name="company-name" required>
+
+    <label for="company-email">Company Email</label>
+    <input type="email" id="company-email" name="company-email" required>
+    
+    <label for="company-phone">Company Phone Number</label>
+    <input type="tel" id="company-phone" name="company-phone" required>
+</form>
+
+
+{% endblock %}
