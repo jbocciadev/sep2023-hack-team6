@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>If you see a button, bootstrap5 is working</h3>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#">
-    Button
-</button>
+content goest here 123
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiamJvY2NpYWRldiIsImEiOiJjbG03aHhubmYwMDU4M2lvYmU5cXF4d2Q0In0.KiIB2JEfaywiqOjHfkVErA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+  });
+</script>
 
 {% endblock %}
