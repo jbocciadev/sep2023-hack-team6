@@ -9,7 +9,6 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -18,6 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
+
 
 ALLOWED_HOSTS = [
     '*',
@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     '8000-jbocciadev-sep2023hackt-v6p9qsdicmz.ws-eu104.gitpod.io',
     '8000-jbocciadev-sep2023hackt-ziulmg9562c.ws-eu104.gitpod.io',
     'ecohub.herokuapp.com',
+    'ecohub2.herokuapp.com', # just to test
     '8000-jbocciadev-sep2023hackt-plngkesfqdt.ws-eu104.gitpod.io',
     ]
 
