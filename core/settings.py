@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     '8000-jbocciadev-sep2023hackt-ziulmg9562c.ws-eu104.gitpod.io',
     'ecohub.herokuapp.com',
     'ecohub2.herokuapp.com',
+    '8000-jbocciadev-sep2023hackt-plngkesfqdt.ws-eu104.gitpod.io',
     ]
 
 
