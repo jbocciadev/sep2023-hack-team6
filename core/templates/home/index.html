@@ -1,16 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
 
-content goest here 123
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-<div id='map' style='width: 400px; height: 300px;'></div>
+    #map {
+      position: absolute;
+      top: 100px;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
 
+  <div id="map"></div>
+  
 <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiamJvY2NpYWRldiIsImEiOiJjbG03aHhubmYwMDU4M2lvYmU5cXF4d2Q0In0.KiIB2JEfaywiqOjHfkVErA';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-  });
+    mapboxgl.accessToken = "pk.eyJ1IjoiY2FsbHVtZGVubmlzaWUiLCJhIjoiY2xrM3gyNmtrMDZsMzNvcnlkcDA1OGlyNSJ9.JPGtfXiSJF5qipCkDbQuyg";
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/satellite-streets-v11',
+      zoom: 1.5,
+      center: [30, 50],
+      projection: 'globe'
+    });
+
+    map.on("style.load", () => {
+      map.setFog({});
+    });
 </script>
 
 {% endblock %}
