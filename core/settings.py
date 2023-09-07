@@ -18,10 +18,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
+MAPBOX_KEY = os.environ.get('MAPBOX_KEY')
 
 ALLOWED_HOSTS = [
     '*',
-    '127.0.0.1', 
+    '127.0.0.1',
     '8000-jbocciadev-sep2023hackt-y8sdu7s4i9n.ws-eu104.gitpod.io',
     'www.team6.cafabr.online',
     '8000-samobrienol-sep2023hack-n6175f17xly.ws-eu104.gitpod.io',
