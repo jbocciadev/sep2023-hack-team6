@@ -20,6 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
+    '*',
     '127.0.0.1', 
     '8000-jbocciadev-sep2023hackt-y8sdu7s4i9n.ws-eu104.gitpod.io',
     'www.team6.cafabr.online',
@@ -28,7 +29,6 @@ ALLOWED_HOSTS = [
     '8000-jbocciadev-sep2023hackt-v6p9qsdicmz.ws-eu104.gitpod.io',
     '8000-jbocciadev-sep2023hackt-ziulmg9562c.ws-eu104.gitpod.io',
     'ecohub.herokuapp.com',
-    'ecohub2.herokuapp.com',
     '8000-jbocciadev-sep2023hackt-plngkesfqdt.ws-eu104.gitpod.io',
     ]
 
