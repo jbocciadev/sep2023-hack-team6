@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Team6" />
-    <meta name="description" content="TODO" />
-    <meta name="keywords" content="TODO" />
+    <meta name="description" content="TODO: Add description" />
+    <meta name="keywords" content="TODO: add keywords" />
+    <!-- Mapbox CDN -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
     <title>{% block title %}{% endblock %}</title>
     {% load bootstrap5 %}
     {% bootstrap_css %}
@@ -13,13 +17,18 @@
 </head>
 
 <body>
-    {% include "navbar.html" %}
-
-    <div class="container">
+    <div>
+        {% include "navbar.html" %}
+    </div>
+    <div class="">
         {% block content %}
         {% endblock %}
     </div>
-    
-    {% include "footer.html" %}
+    <div>
+        {% include "footer.html"%}
+    </div>
+
+    {% block postloadjs %} 
+    {% endblock%}
 </body>
 </html>
