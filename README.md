@@ -1,10 +1,12 @@
 
-<h1 align="center">Tech for a Greener Tomorrow <br> 🍃♻️🏞️🌱 Hackathon for Sustainable Solution 🌱🏞️♻️🍃
+<h1 align="center" style="color:forestgreen; font-weight:bold">BusyB </h1>
+<h2 align="center" style="color:#ffbd59">EcoHub <br> EcoHive</h2>
 
-</h1>
 
 
-![Summer of Code Banner](https://res.cloudinary.com/djdefbnij/image/upload/v1693903105/Hackathons/Untitled_design_2_1_gzwakq.png)
+<img src="./readme_files/busyB_logo.png" style="width:100%;">
+
+<!-- ![BusyB logo](/readme_files/busyB_logo.png) -->
 
 
 # SUBMISSION
@@ -16,7 +18,9 @@ The project is deployed and can be accessed at [https://ecohubs-f622e01cb1e8.her
 
 # ABOUT SUBMISSION
 ## Intro
-One or two paragraphs providing an overview of our project
+BusyB is an NGO that strives to help businessess of all sizes and industries in their quest towards a more sustainable world. To this end, we have created our EcoHub/EcoHive, a platform for companies to showcase their ESG initiatives to prospective investors, customers and current or potential employees. Our goal is to create a virtuous circle of friendly competition between companies that pushes them forward in their work.
+
+In our EcoHub/EcoHive, companies can upload the details and images of their initiatives. Once our team has reviewed and approved the content, the company will receive a badge for these that will be displayed on their profile. These badges work in a double way. Fistly, they are a token for companies to collect and boast, both internally in their newsletters, email signatures, etc. and externally in their traditional and social media platforms. Secondly, they are a quick and easy visual cue for anyone seeing them to gauge and assign a value to the contributions that the company is making.
 
 ## Goal
 The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:
