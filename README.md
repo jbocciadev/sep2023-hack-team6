@@ -12,7 +12,7 @@
 # SUBMISSION
 ## Deployment
 #### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
-The project is deployed and can be accessed at [https://ecohubs-f622e01cb1e8.herokuapp.com/](https://ecohubs-f622e01cb1e8.herokuapp.com/).
+This project is deployed in [Heroku](https://www.heroku.com/) and can be accessed at [https://ecohubs-f622e01cb1e8.herokuapp.com/](https://ecohubs-f622e01cb1e8.herokuapp.com/).
 
 
 
@@ -32,11 +32,23 @@ The goal section provides a concise summary of the main objective or purpose of 
 
 ## Tech
 In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
+
+### Languages:
+ - HTML
+ - CSS
+ - JavaScript
+ - Python 🐍
+
+
+### Frameworks, Libraries, APIs and Hosting:
+
 - 🌐 [Heroku](https://www.heroku.com/) was used to deploy the project.
-- 🌐 [Amazon Web services (AWS)](https://aws.amazon.com/) was used for external file storage.
+- 🌐 [Amazon Web Services (AWS)](https://aws.amazon.com/) was used for external file storage.
 - 🌐 [Mapbox](https://www.mapbox.com/) API was used to render the map.
 - 🌐 [Django](https://www.djangoproject.com/) is the framework used to build the app.
 - 🌐 [Elephant SQL](https://www.elephantsql.com/) provides the hosting for the database.
+- 🌐 [Bootstrap v.5](https://getbootstrap.com/) was used for the styling in our page.
+- 🌐 [JQuery](https://jquery.com/) was used as a dependency of Bootstrap.
 
 ## Credits
 We would like to give credit to the following individuals, organizations, and resources that have contributed to the project or provided inspiration:
