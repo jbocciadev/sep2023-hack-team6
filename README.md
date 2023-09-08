@@ -28,8 +28,13 @@ The goal section provides a concise summary of the main objective or purpose of 
 
 ## Tech
 In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
+- 🌐 [Heroku](https://www.heroku.com/) was used to deploy the project.
+- 🌐 [Amazon Web services (AWS)](https://aws.amazon.com/) was used for external file storage.
+- 🌐 [Mapbox](https://www.mapbox.com/) API was used to render the map.
+- 🌐 [Django](https://www.djangoproject.com/) is the framework used to build the app.
+- 🌐 [Elephant SQL](https://www.elephantsql.com/) provides the hosting for the database.
 
 ## Credits
 We would like to give credit to the following individuals, organizations, and resources that have contributed to the project or provided inspiration:
-- 🌐 [External Resource 1]
-- 🌐 [External Resource 2]
+
+
