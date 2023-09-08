@@ -10,7 +10,7 @@
 # SUBMISSION
 ## Deployment
 #### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
-The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
+The project is deployed and can be accessed at [https://ecohubs-f622e01cb1e8.herokuapp.com/](https://ecohubs-f622e01cb1e8.herokuapp.com/).
 
 
 
