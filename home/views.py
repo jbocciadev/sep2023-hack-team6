@@ -17,3 +17,7 @@ class About(TemplateView):
 
 class Contact(TemplateView):
     template_name = "contact.html"
+
+
+class Thank(TemplateView):
+    template_name = "thank-you.html"
