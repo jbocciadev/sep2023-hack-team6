@@ -107,8 +107,8 @@ body {
 
  /* About heading */
 
- .about-heading {
-  margin-top: 48px;
+ .page-heading {
+  margin-top: 6rem;
 }
 
 /* Companies */
@@ -133,27 +133,33 @@ body {
 .yellow-title {
   color: #FEBC5B;
 }
+
 .box {
-  margin-top: 3rem;
-  padding: 1rem;
+  margin-top: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   border: none;
 }
+
 .form {
   padding: 1.5rem;
   margin: 1rem;
   border-radius: 50px;
   max-width: 600px;
 }
+
 .form-content {
   display: flex;
+  justify-content: center;
 }
+
 .form-box {
   display: flex;
   flex-direction: column;
   justify-content: center
 }
+
 .form-labels {
   display: flex;
   flex-direction: column;
@@ -161,6 +167,7 @@ body {
   align-items: flex-end;
   padding: 1rem;
 }
+
 .form-input {
   display: flex;
   flex-direction: column;
@@ -168,6 +175,7 @@ body {
   align-items: flex-start;
   padding: 1rem;
 }
+
 .submit {
   display: flex;
   flex-direction: row;
@@ -175,6 +183,7 @@ body {
   padding: 0.5rem;
   margin: 0.5rem;
 }
+
 .submit-button {
   width: 100px;
   border-radius: 20px;
@@ -182,7 +191,17 @@ body {
   padding: 0.5rem;
   margin: 0.5rem;
 }
+
 .submit-button:hover {
   box-shadow: 5px 5px 10px #FEBC5B;;
   background-color: #FA9702;;
+}
+
+.contact-image {
+  width: 60vw;
+}
+
+.contact-image-container {
+  display: flex;
+  justify-content: center;
 }
