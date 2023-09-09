@@ -104,3 +104,85 @@ body {
   width: 100%;
   max-width: 500px;
 }
+
+ /* About heading */
+
+ .about-heading {
+  margin-top: 48px;
+}
+
+/* Companies */
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.company-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company-image {
+  width: 25vw;
+}
+
+.yellow-title {
+  color: #FEBC5B;
+}
+.box {
+  margin-top: 3rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+.form {
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 50px;
+  max-width: 600px;
+}
+.form-content {
+  display: flex;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.form-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 1rem;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.submit-button {
+  width: 100px;
+  border-radius: 20px;
+  background-color: #FEBC5B;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.submit-button:hover {
+  box-shadow: 5px 5px 10px #FEBC5B;;
+  background-color: #FA9702;;
+}
