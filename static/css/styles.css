@@ -27,6 +27,10 @@ body {
   color: #82BF80 !important; 
 }
 
+.logo {
+  width: 30vh;
+}
+
 @media screen and (max-width: 767px) {
   .sidebar {
     background: rgba(68, 61, 104, 0.15);
@@ -112,7 +116,7 @@ body {
  /* About heading */
 
  .page-heading {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 /* Companies */
