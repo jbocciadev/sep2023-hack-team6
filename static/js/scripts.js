@@ -6,8 +6,8 @@ const geojson = {
     {
         'type': 'Feature',
         'properties': {
-        'title': 'Office 1',
-        'message': 'This is the building',
+        'title': 'Megs Bakery',
+        'message': '123 Smithy street',
         'iconSize': [60, 60],
         'filename': 'office_1',
         'filetype': 'glb'
@@ -16,18 +16,50 @@ const geojson = {
         'type': 'Point',
         'coordinates': [-66.324462, -16.024695]
         }
+    },
+    {
+        'type': 'Feature',
+        'properties': {
+        'title': 'Money Bank',
+        'message': 'London',
+        'iconSize': [60, 60],
+        'filename': 'office_2',
+        'filetype': 'glb'
+        },
+        'geometry': {
+        'type': 'Point',
+        'coordinates': [51.50519000, -0.02085000]
+        }
+    },
+    {
+        'type': 'Feature',
+        'properties': {
+        'title': 'Toot Toot Delivery',
+        'message': 'Glasgow',
+        'iconSize': [60, 60],
+        'filename': 'office_3',
+        'filetype': 'glb'
+        },
+        'geometry': {
+        'type': 'Point',
+        'coordinates': [55.860916, -4.251433]
+        }
     }
     ]
 };
-
-const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    zoom: 1.5,
-    center: [30, 50],
-    projection: 'globe',
-    antialias: true 
-});
+// This hasn't been tested yet, fix this
+if (!mapboxgl.supported()) {
+    alert('Your browser does not support Mapbox GL');
+    } else {
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v11',
+        zoom: 1.5,
+        center: [30, 50],
+        projection: 'globe',
+        antialias: true 
+    });
+    }
 
 const tb = (window.tb = new Threebox(
     map,
