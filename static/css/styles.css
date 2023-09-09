@@ -23,6 +23,7 @@ body {
     justify-content: flex-end;
 }
 
+
 @media screen and (max-width: 767px) {
     .sidebar {
         background: rgba(68, 61, 104, 0.15);
@@ -36,4 +37,13 @@ body {
     .nav-item {
         font-size: 2rem;
     }
+}
+
+
+/** container styles **/
+
+.box {
+    border: 2px solid #0f0f0f;
+    border-radius: 50px;
+    padding: 7rem 1rem 1rem 1rem;
 }
