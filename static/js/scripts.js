@@ -1,74 +1,94 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2FsbHVtZGVubmlzaWUiLCJhIjoiY2xrM3gyNmtrMDZsMzNvcnlkcDA1OGlyNSJ9.JPGtfXiSJF5qipCkDbQuyg';
 
-const geojson = {
-    'type': 'FeatureCollection',
-    'features': [
-    {
-        'type': 'Feature',
-        'properties': {
-        'message': 'Foo',
-        'iconSize': [60, 60]
-        },
-        'geometry': {
-        'type': 'Point',
-        'coordinates': [-66.324462, -16.024695]
+    const geojson1 = {
+        'type': 'FeatureCollection',
+        'features': [
+        {
+            'type': 'Feature',
+            'properties': {
+            'title': 'Office 1',
+            'message': 'This is the building',
+            'iconSize': [60, 60],
+            'filename': 'office_1',
+            'filetype': 'glb'
+            },
+            'geometry': {
+            'type': 'Point',
+            'coordinates': [-66.324462, -16.024695]
+            }
         }
-    },
-    {
-        'type': 'Feature',
-        'properties': {
-        'message': 'Bar',
-        'iconSize': [50, 50]
-        },
-        'geometry': {
-        'type': 'Point',
-        'coordinates': [-61.21582, -15.971891]
-        }
-    },
-    {
-        'type': 'Feature',
-        'properties': {
-        'message': 'Baz',
-        'iconSize': [40, 40]
-        },
-        'geometry': {
-        'type': 'Point',
-        'coordinates': [-63.292236, -18.281518]
-        }
-    }
-    ]
-};
-
-const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    zoom: 1.5,
-    center: [30, 50],
-    projection: 'globe'
-});
-
-map.on("style.load", () => {
-    map.setFog({});
-});
-
-// Add markers to the map.
-for (const marker of geojson.features) {
-    // Create a DOM element for each marker.
-    const el = document.createElement('div');
-    const width = marker.properties.iconSize[0];
-    const height = marker.properties.iconSize[1];
-    el.className = 'marker';
-    el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
-    el.style.width = `${width}px`;
-    el.style.height = `${height}px`;
-    el.style.backgroundSize = '100%';
+        ]
+    };
     
-    el.addEventListener('click', () => {
-    $('#exampleModal').modal('toggle')
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v11',
+        zoom: 1.5,
+        center: [30, 50],
+        projection: 'globe',
+        antialias: true 
     });
+
+    const tb = (window.tb = new Threebox(
+        map,
+        map.getCanvas().getContext('webgl'),
+        {
+            defaultLights: true
+        }
+    ));
     
-    // Add markers to the map.
-    new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
-}
+    map.on("style.load", () => {
+        map.setFog({});
+
+        for (const marker of geojson1.features) {
+
+          obj_filename = `models/${marker.properties.filename}.${marker.properties.filetype}`
+          console.log(obj_filename)
+          // Create a DOM element for each marker.
+          const el = document.createElement('div');
+          const width = marker.properties.iconSize[0];
+          const height = marker.properties.iconSize[1];
+          el.className = 'marker';
+          el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
+          el.style.width = `${width}px`;
+          el.style.height = `${height}px`;
+          el.style.backgroundSize = '100%';
+          
+          el.addEventListener('click', () => {
+            $('#exampleModal').modal('toggle')
+            $('#exampleModalLabel').html(marker.properties.title)
+            $('#modalText').html(marker.properties.message)
+          });
+          
+          // Add markers to the map.
+          new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(map);
+
+          map.addLayer({
+              id: 'custom-threebox-model',
+              type: 'custom',
+              renderingMode: '3d',
+              onAdd: function () {
+                  const scale = 1;
+                  const options = {
+                      obj: `{% static '${obj_filename}' %}`,
+                      type: `${marker.properties.filetype}`,
+                      scale: { x: scale, y: scale, z: scale },
+                      units: 'meters',
+                      rotation: { x: 90, y: -90, z: 0 }
+                  };
+
+                  tb.loadObj(options, (model) => {
+                      model.setCoords(marker.geometry.coordinates);
+                      model.setRotation({ x: 0, y: 0, z: 241 });
+                      tb.add(model);
+                  });
+              },
+
+              render: function () {
+                  tb.update();
+              }
+          });
+    }
+    });
