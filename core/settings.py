@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = os.environ.get('DEBUG') == "True"
 
 MAPBOX_KEY = os.environ.get('MAPBOX_KEY')
 
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     # 'storages',
     # apps
     'home',
-    'company'
+    # 'company'
 ]
 
 MIDDLEWARE = [
@@ -133,11 +133,12 @@ class MediaStorage(S3Boto3Storage):
 
 USE_AWS = os.environ.get('USE_AWS')
 
-if USE_AWS is True:
+if USE_AWS == "True":
+    
+    print("\nUsing AWS")
     
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
@@ -160,6 +161,8 @@ if USE_AWS is True:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 else:
+    print("\nUsing Local Static")
+    
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
@@ -170,9 +173,6 @@ else:
 
     STATIC_URL = "/static/"
     MEDIA_URL = "/media/"
-
-
-
 
 
 # Database Config
