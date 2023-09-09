@@ -1,4 +1,4 @@
-mapboxgl.accessToken = "{{ mapbox_key }}";
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2FsbHVtZGVubmlzaWUiLCJhIjoiY2xrM3gyNmtrMDZsMzNvcnlkcDA1OGlyNSJ9.JPGtfXiSJF5qipCkDbQuyg';
 
 const geojson = {
     'type': 'FeatureCollection',
