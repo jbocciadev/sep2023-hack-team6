@@ -149,8 +149,6 @@ MEDIA_URL = "/media/"
 
 
 if USE_AWS is True:
-    
-    print("Should not be here")
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
