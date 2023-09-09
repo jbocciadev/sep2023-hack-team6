@@ -210,3 +210,17 @@ body {
   box-shadow: 2px 2px 2px #ABD9A9;
   transform: translateY(2px);
 }
+
+@media (max-width: 992px) {
+  .badge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-image {
+    width: 60vw;
+  }
+}
