@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     # 'storages',
     # apps
     'home',
+    'company'
 ]
 
 MIDDLEWARE = [
@@ -121,18 +122,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
-MEDIAFILES_DIRS = (
-    os.path.join(BASE_DIR, 'media'),
-)
-
-
 class StaticStorage(S3Boto3Storage):
     location = 'static'
 
@@ -144,11 +133,11 @@ class MediaStorage(S3Boto3Storage):
 
 USE_AWS = os.environ.get('USE_AWS')
 
-STATIC_URL = "/static/"
-MEDIA_URL = "/media/"
-
-
 if USE_AWS is True:
+    
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
@@ -169,6 +158,24 @@ if USE_AWS is True:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+else:
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+
+    MEDIAFILES_DIRS = (
+        os.path.join(BASE_DIR, 'media'),
+    )
+        
+
+    
+    STATIC_URL = "/static/"
+    MEDIA_URL = "/media/"
+
+
+
+
 
 # Database Config
 DATABASE_URL = os.environ.get("DATABASE_URL")
