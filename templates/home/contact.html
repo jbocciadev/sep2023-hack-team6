@@ -5,7 +5,7 @@
 <div class="container">
     <h1 class="page-heading yellow-title">Contact Us</h1>
     <div class="contact-image-container">
-        <img src="{% static 'images/eco-lineart.png' %}" alt="artwork" class="contact-image">
+    <img src="{% static 'images/eco-lineart.png' %}" alt="artwork" class="contact-image">
     </div>
     <section class="box">
         <div class="form">
@@ -14,17 +14,19 @@
                 We will get back in touch and get all the relevant information from you.
             </p>
             
-            <form method="POST" class="form-box" action="/">
-                <div class="form-content">
-                    <div class="form-labels">
-                        <label for="company-name">Company Name:</label><br>
-                        <label for="company-email">Company Email:</label><br>
-                        <label for="company-phone">Company Phone Number:</label><br>
+            <form action="thankyou">
+                <div class="form-content form-grid">
+                    <div class="form-flex">
+                        <label for="company-name">Company Name:</label>
+                        <input type="text" id="company-name" name="company-name" required>                        
                     </div>
-                    <div class="form-input">
-                        <input type="text" id="company-name" name="company-name" required><br>
-                        <input type="email" id="company-email" name="company-email" required><br>
-                        <input type="tel" id="company-phone" name="company-phone" required><br>
+                    <div class="form-flex">
+                        <label for="company-email">Company Email:</label>
+                        <input type="email" id="company-email" name="company-email" required>
+                    </div>
+                    <div class="form-flex">
+                        <label for="company-phone">Company Phone Number:</label>
+                        <input type="tel" id="company-phone" name="company-phone" required>
                     </div>
                 </div>
                 <div class="submit">
