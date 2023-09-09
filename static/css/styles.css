@@ -68,3 +68,24 @@ body {
     flex-direction: row;
     align-items: center;
 }
+
+/* Badge styles */
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.badge {
+    width: 100px;
+    padding: 8px;
+}
+
+.badge:empty {
+    display: block;
+}
+
+.badge-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

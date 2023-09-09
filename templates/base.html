@@ -20,21 +20,22 @@
         .box {
             margin-top: 3rem;
             padding: 1rem;
+            display: flex;
+            justify-content: center;
+            border: none;
         }
 
         .form {
-            border: 2px solid #0f0f0f;
             padding: 1.5rem;
             margin: 1rem;
             border-radius: 50px;
+            max-width: 600px;
         }
 
         .form-box {
             display: flex;
             flex-direction: column;
-            border: 1px solid pink;
-            justify-content: center;
-            align-items: center;
+            justify-content: center
         }
 
         .form-content {
@@ -44,20 +45,40 @@
 
 
         .form-labels {
-            align-content: right;
-            border: 1px solid pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
             padding: 1rem;
         }
 
         .form-input {
-            align-content: left;
-            border: 1px solid pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
             padding: 1rem;
         }
 
         .submit {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
 
-            border: 2px solid purple;
+        .submit-button {
+            width: 100px;
+            border-radius: 20px;
+            background-color: #FEBC5B;
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
+
+        .submit-button:hover {
+            box-shadow: 5px 5px 10px #FEBC5B;;
+            background-color: #fa9702;;
         }
 
     </style>
