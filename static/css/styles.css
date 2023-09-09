@@ -1,91 +1,106 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 #map {
-    position: absolute;
-    top: 100px;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 100%;
 }
 .marker {
-    display: block;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 0;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
 }
 .navbar {
-    background-color: #0f0f0f;
+  background-color: #0f0f0f;
 }
 
 .navbar-nav {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 
 @media screen and (max-width: 767px) {
-    .sidebar {
-        background: rgba(68, 61, 104, 0.15);
-        backdrop-filter: blur(10px);
-    }
+  .sidebar {
+    background: rgba(68, 61, 104, 0.15);
+    backdrop-filter: blur(10px);
+  }
 
-    .navbar-nav {
-        justify-content: center;
-    }
+  .navbar-nav {
+    justify-content: center;
+  }
 
-    .nav-item {
-        font-size: 2rem;
-    }
+  .nav-item {
+    font-size: 2rem;
+  }
 }
-
 
 /** container styles **/
 
 .box {
-    border: 2px solid #0f0f0f;
-    border-radius: 50px;
-    padding: 7rem 1rem 1rem 1rem;
+  border: 2px solid #0f0f0f;
+  border-radius: 50px;
+  padding: 7rem 1rem 1rem 1rem;
 }
 
 /* Badge styles */
 
 .badge-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 .badge {
-    width: 100px;
-    padding: 8px;
+  width: 100px;
+  padding: 8px;
 }
 
 .badge:empty {
-    display: block;
+  display: block;
 }
 
 .badge-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Badge styles */
 
 .badge-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 .badge {
-    width: 100px;
-    padding: 8px;
+  width: 100px;
+  padding: 8px;
 }
 
 .badge:empty {
-    display: block;
+  display: block;
 }
 
 .badge-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 404 Page styles */
+
+.page-404 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.img-404 {
+  width: 100%;
+  max-width: 500px;
 }
