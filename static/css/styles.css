@@ -68,3 +68,27 @@ body {
     flex-direction: row;
     align-items: center;
 }
+ /* About heading */
+
+.about-heading {
+    margin-top: 48px;
+}
+
+/* Companies */
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 16px;
+    gap: 16px;
+}
+
+.company-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-image {
+    width: 25vw;
+}
