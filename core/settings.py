@@ -142,8 +142,13 @@ class MediaStorage(S3Boto3Storage):
     file_overwrite = False
 
 
-if 'USE_AWS' in os.environ:
+USE_AWS = os.environ.get('USE_AWS')
 
+STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
+
+
+if USE_AWS is True:
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
